@@ -1,0 +1,46 @@
+mgvi_cc_prebuilt_library_shared {
+    arch: {
+        arm: {
+            shared_libs: [
+                "libpq_prot",
+                "liblog",
+            ],
+            srcs: [
+                "arm/libaiselector.so",
+            ],
+        },
+        arm64: {
+            shared_libs: [
+                "libpq_prot",
+                "liblog",
+            ],
+            srcs: [
+                "arm64/libaiselector.so",
+            ],
+        },
+    },
+    export_include_dirs: [
+        "include",
+    ],
+    mgvi_brm_platform: "mt6833",
+    mgvi_platforms: [
+        "mt6833",
+        "mt6853",
+        "mt6873",
+        "mt6877",
+        "mt6893",
+        "mt6895",
+        "mt6885",
+        "mt6855",
+        "mt6879",
+        "mt6983",
+        "mt6789",
+    ],
+    mgvi_product_line: "tablet",
+    mgvi_so_name: "libaiselector",
+    mgvi_src_path: "vendor/mediatek/proprietary/hardware/pqselector",
+    name: "libaiselector",
+    owner: "mtk",
+    proprietary: true,
+}
+
